@@ -3,7 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Contact;
-use App\Entity\Departements;
+use App\Entity\Department;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -26,7 +26,7 @@ class ContactType extends AbstractType
                 'attr' => ['cols' => '5', 'rows' => '5']
             ])
             ->add('departements', EntityType::class, [
-                'class' => Departements::class,
+                'class' => Department::class,
                 'choice_label' => 'name',
                 'multiple' => false,
                 'expanded' => false,

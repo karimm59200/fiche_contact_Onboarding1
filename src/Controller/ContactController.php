@@ -35,7 +35,7 @@ class ContactController extends AbstractController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $dep = $contact->getDepartements();
+            $dep = $contact->getDepartment();
             $name = $contact->getName();
             $email = $dep->getEmail();
 

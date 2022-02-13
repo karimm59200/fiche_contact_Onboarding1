@@ -38,10 +38,10 @@ class Contact
     private $message;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Departements::class)
+     * @ORM\ManyToOne(targetEntity=department::class)
      * @ORM\JoinColumn(nullable=false)
      */
-    private $departements;
+    private $department;
 
     public function getId(): ?int
     {
@@ -96,14 +96,14 @@ class Contact
         return $this;
     }
 
-    public function getDepartements(): ?Departements
+    public function getdepartment(): ?department
     {
-        return $this->departements;
+        return $this->department;
     }
 
-    public function setDepartements(?Departements $departements): self
+    public function setdepartment(?department $department): self
     {
-        $this->departements = $departements;
+        $this->department = $department;
 
         return $this;
     }
